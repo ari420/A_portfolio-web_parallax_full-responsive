@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/node_modules/remixicon/fonts/remixicon.css" />
+    <style>
+      /* Custom Scrollbar Styles */
+      ::-webkit-scrollbar {
+        width: 12px; /* Width of the scrollbar */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #ee00ff; /* Thumb color (blue) */
+        border-radius: 6px; /* Rounded edges */
+        border: 3px solid transparent; /* Space around the thumb */
+        background-clip: padding-box; /* Makes border visible */
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #e5e7eb; /* Track color (gray) */
+        border-radius: 6px; /* Rounded edges for the track */
+      }
+
+      /* Hide scrollbar on some elements if needed */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .sec2 {
+        transition: background-color 0.5s ease; /* Smooth transition for background color change */
+      }
+
+      body.h {
+        overflow: hidden;
+      }
+
+      .left {
+        transform: translateX(-2000px);
+      }
+      .right {
+        transform: translateX(2000px);
+      }
+      .op {
+        opacity: 0;
+      }
+      .rotat {
+        transform: translateY(-450px) rotate(-50deg);
+        transform-origin: left;
+      }
+      .up {
+        transform: translateY(-300px);
+      }
+      .scale {
+        font-size: 300px;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- //////////////////////loding////////////////////////// -->
+    <div
+      class="hidden loding w-full h-[120vh] xl:h-[100vh] bg-primary-p fixed top-[-9%] xl:top-0 z-[100] justify-center items-center"
+    >
+      <img src="src/img/loding.gif" alt="Loading..." />
+    </div>
+    <!-- //////////////////////////////////////////////////////////// -->
+    <main class="w-[100%] h-[35%] md:h-[50%] xl:h-[100vh] relative">
+      <figure class="w-full h-[35%] md:h-[50%] xl:h-[100%]">
+        <img class="w-full h-full" src="src/img/bg_hed.jpg" alt="" />
+      </figure>
+      <header class="fixed top-0 left-0 w-full h-[6%] xl:h-[10%] z-50">
+        <ul class="w-full h-full flex justify-between items-center">
+          <li
+            class="Arian ml-5 text-lg md:text-2xl font-bold cursor-pointer text-primary-b"
+          >
+            ARIAN
+          </li>
+          <li
+            class="tuggel relative *:absolute *:h-full *:cursor-pointer *:w-full *:flex *:justify-center *:items-center *:xl:text-3xl *:text-xl w-[20px] h-[20px] md:w-[30px] md:h-[30px] xl:w-[40px] xl:h-[40px] mr-6"
+          >
+            <i
+              class="ri-menu-fold-line text-primary-b transition duration-400 ease-out"
+            ></i>
+            <i
+              class="ri-menu-unfold-line text-primary-b transition duration-400 ease-out"
+            ></i>
+          </li>
+        </ul>
+      </header>
+      <div
+        class="tickt absolute z-30 left-0 bottom-0 xl:top-[40%] md:top-[70%] w-[40px] md:w-[50px] xl:w-[60px] h-[50px] md:h-[60px] xl:h-[70px]"
+      >
+        <img class="cursor-pointer" src="src/img/left_thing.svg" alt="" />
+      </div>
+      <div
+        class="menu duration-300 z-40 fixed top-0 right-[-100%] w-full h-[100vh] flex bg-primary-w"
+      >
+        <nav class="w-full h-full flex items-end justify-center">
+          <ul
+            class="w-full h-[94%] xl:h-[90%] *:w-full *:flex *:justify-center *:items-center flex flex-wrap content-start justify-center"
+          >
+            <li class="h-[60%]">
+              <ul
+                class="h-full w-full flex flex-wrap *:text-center *:flex *:justify-center *:items-center *:text-xl *:md:text-2xl *:xl:text-3xl *:w-full overflow-y-scroll"
+              >
+                <li class="font-thin">work</li>
+                <li><a href="">MY Summer</a></li>
+                <li><a href="">Parsa Ghorbanian</a></li>
+                <li><a href="">Arian Afssharian</a></li>
+                <li><a href="">ParnianFlow</a></li>
+                <li><a href="">What we Do</a></li>
+                <li><a href="">Templats</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Servises</a></li>
+                <li><a href="">About</a></li>
+              </ul>
+            </li>
+            <li class="h-[20%]">
+              <ul
+                class="w-full h-full flex flex-wrap content-center md:items-center justify-center md:justify-evenly *:w-full *:md:w-[50%] *:flex *:justify-center *:items-center *:text-center *:text-xl *:md:text-2xl *:xl:text-3xl overflow-y-scroll"
+              >
+                <li>
+                  <a
+                    class="hover:underline duration-300 font-extralight"
+                    href="https://www.facebook.com/arian.rust.52?mibextid=ZbWKwL"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:underline duration-300 font-extralight"
+                    href="https://www.youtube.com/channel/UC3Zp73VbCgjk3ax4eGZF7cA"
+                    target="_blank"
+                    >Youtube</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="h-[20%]">
+              <ul
+                class="w-full h-full flex flex-wrap content-center md:items-center justify-center md:justify-evenly *:w-full *:flex *:justify-center *:items-center *:text-center *:text-xl *:md:text-2xl *:xl:text-3xl overflow-y-scroll"
+              >
+                <li class="md:w-[50%] xl:w-[33.33333%]">
+                  <a
+                    class="hover:underline duration-300 font-extralight"
+                    href="https://github.com/ari420"
+                    target="_blank"
+                    >Github</a
+                  >
+                </li>
+                <li class="md:w-[50%] xl:w-[33.33333%]">
+                  <a
+                    class="hover:underline duration-300 font-extralight"
+                    href="https://www.linkedin.com/in/arian-afsharian-7a3903156"
+                    target="_blank"
+                    >linkedin</a
+                  >
+                </li>
+                <li class="md:w-[100%] xl:w-[33.33333%]">
+                  <a
+                    class="hover:underline duration-300 font-extralight"
+                    href="https://www.instagram.com/component__shop?igsh=enRla3lxa3dzYXho"
+                    target="_blank"
+                    >instagram</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section
+        class="center absolute top-0 left-[50%] translate-x-[-50%] w-[290px] md:w-[580px] xl:w-[1350px] 2xl:w-[1650px] h-[230px] md:h-[400px] xl:h-[100vh] 2xl:h-[90vh]"
+      >
+        <div class="main w-full h-full relative">
+          <img
+            class="absolute z-[5] left-[90px] md:left-[185px] xl:left-[550px] 2xl:left-[600px] bottom-[60px] md:bottom-[108px] xl:bottom-[240px] 2xl:bottom-[160px] w-[90px] md:w-[150px] xl:w-[200px] 2xl:w-[350px]"
+            src="src/img/f1.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[10] left-[50%] bottom-[100%] animate-p1 md:animate-p2 xl:animate-p3 2xl:animate-p4 w-[90px] md:w-[150px] xl:w-[200px] 2xl:w-[350px]"
+            src="src/img/paintin.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[15] left-[83px] md:left-[190px] xl:left-[558px] 2xl:left-[610px] bottom-[63px] md:bottom-[110px] xl:bottom-[250px] 2xl:bottom-[176px] w-[90px] md:w-[150px] xl:w-[200px] 2xl:w-[350px]"
+            src="src/img/leav.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[25] left-[0] xl:left-[320px] 2xl:left-[200px] bottom-[0] xl:bottom-[150px] 2xl:bottom-[20px] w-[80px] md:w-[150px] xl:w-[200px] 2xl:w-[350px]"
+            src="src/img/hed1.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[24] right-[0px] md:right-[10px] xl:right-[330px] 2xl:right-[220px] bottom-[4px] md:bottom-[20px] xl:bottom-[150px] 2xl:bottom-[30px] w-[80px] md:w-[150px] xl:w-[200px] 2xl:w-[350px]"
+            src="src/img/hed2.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[20] right-[75px] md:right-[160px] xl:right-[530px] 2xl:right-[580px] bottom-[25px] md:bottom-[50px] xl:bottom-[200px] 2xl:bottom-[110px] w-[55px] md:w-[110px] xl:w-[100px] 2xl:w-[170px]"
+            src="src/img/hed3.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[20] left-[25px] md:left-[85px] xl:left-[430px] 2xl:left-[410px] bottom-[0] xl:bottom-[130px] 2xl:bottom-[0px] w-[200px] md:w-[350px] xl:w-[400px] 2xl:w-[700px]"
+            src="src/img/hed4.png"
+            alt=""
+          />
+          <img
+            class="absolute z-[25] left-[50px] md:left-[130px] xl:left-[490px] bottom-[95px] md:bottom-[165px] xl:bottom-[320px] 2xl:left-[520px] w-[35px] md:w-[60px] xl:w-[60px] 2xl:w-[100px] animate-ball"
+            src="src/img/s_ball.png"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- //////////////////////section1 done///////////////////////////////////// -->
+
+    <section class="sec2 w-full bg-primary-p -z-20 relative flex flex-wrap">
+      <img
+        data-ari="up"
+        class="transition duration-1000 w-[380px] md:w-[600px] xl:w[500px] 2xl:w-[700px] absolute left-[-250px] md:left-[-400px] xl:left-[-300px] 2xl:left-[-500px] bottom-[180px] xl:bottom-[2500px] blur-sm -z-20"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="transition duration-1000 w-[180px] md:w-[200px] xl:w-[300px] absolute left-[-40px] md:left-[-50px] xl:left-[-30px] bottom-[30px] md:bottom-[320px] xl:bottom-[2500px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="transition duration-1000 w-[180px] md:w-[200px] xl:w-[300px] absolute right-[-40px] md:right-[-50px] xl:right-[-30px] bottom-[100px] md:bottom-[250px] xl:bottom-[2200px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="hidden xl:flex transition duration-1000 xl:w-[100px] absolute xl:left-[-30px] xl:bottom-[1900px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="hidden xl:flex transition duration-1000 xl:w-[300px] absolute xl:right-[-30px] xl:bottom-[1600px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="hidden xl:flex transition duration-1000 xl:w-[400px] absolute xl:left-[-30px] xl:bottom-[1300px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="hidden xl:flex transition duration-1000 xl:w-[200px] absolute xl:right-[-30px] xl:bottom-[1000px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="up"
+        class="hidden xl:flex transition duration-1000 xl:w-[400px] absolute xl:left-[-30px] xl:bottom-[700px] -z-10"
+        src="src/img/big_ball.png"
+        alt=""
+      />
+      <img
+        data-ari="rotat"
+        class="transition duration-1000 hidden xl:flex absolute bottom-[2600px] 2xl:left-[1100px] xl:left-[800px] xl:w-[250px] 2xl:w-[350px] rotate-[20deg]"
+        src="src/img/snake.png"
+        alt=""
+      />
+      <div
+        class="fp w-full my-[100px] xl:my-[300px] flex flex-wrap justify-center content-center"
+      >
+        <p
+          data-ari="op"
+          class="transition duration-500 w-full flex justify-center font-serif text-3xl md:text-5xl xl:text-[70px] 2xl:text-[100px]"
+        >
+          Standing out is easy, all it
+        </p>
+        <p
+          data-ari="op"
+          class="transition duration-500 w-full flex justify-center font-serif text-3xl md:text-5xl xl:text-[70px] 2xl:text-[100px]"
+        >
+          takes is good design.
+        </p>
+      </div>
+      <div
+        class="w-full flex mt-[50px] mb-[100px] xl:mb-[300px] justify-center items-center"
+      >
+        <p
+          class="w-full flex justify-center font-serif text-5xl md:my-8 md:text-7xl xl:text-[150px] 2xl:text-[200px]"
+        >
+          What we do
+        </p>
+      </div>
+      <ul
+        class="w-full mb-[100px] xl:mb-[600px] flex flex-wrap justify-center content-center *:w-full *:flex *:justify-center"
+      >
+        <li class="">
+          <p
+            data-ari="left"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Debug
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="right"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Develop
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="left"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Branding
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="right"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Digital
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="left"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Social
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="right"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-4 ease-out"
+          >
+            Illustration
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="left"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Marketing
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="right"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            Video
+          </p>
+        </li>
+        <li class="">
+          <p
+            data-ari="left"
+            class="font-medium my-2 text-3xl md:text-5xl xl:text-[150px] 2xl:text-[200px] transition duration-400 ease-out"
+          >
+            3D
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- /////////////////////////////////////////section2 donn /////////////////////////////////////////// -->
+
+    <section
+      class="sec3 w-full *:w-full *:xl:w-[50%] *:flex *:justify-center *:items-center *:flex-wrap flex flex-wrap xl:relative bg-primary-w"
+    >
+      <div
+        class="*:w-full *:font-serif *:text-8xl *:md:text-[120px] *:xl:text-[200px] *:2xl:text-[300px] *:flex *:justify-center *:md:justify-start h-fit xl:absolute left-0"
+      >
+        <h1 data-ari="op" class="transition duration-300 md:ml-[50px]">our</h1>
+        <h1 data-ari="op" class="transition duration-300 md:ml-[50px]">work</h1>
+      </div>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute right-0 top-[300px] 2xl:top-[500px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/sherry.png"
+          alt=""
+        />
+        <figcaption
+          class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex justify-end"
+        >
+          responsive Tailwind
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute left-0 top-[700px] 2xl:top-[900px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/tic tac toe.png"
+          alt=""
+        />
+        <figcaption class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex">
+          Games
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute right-0 top-[1200px] 2xl:top-[1600px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/music_player.png"
+          alt=""
+        />
+        <figcaption
+          class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex justify-end"
+        >
+          PWA music player
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute left-0 top-[1600px] 2xl:top-[2000px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/portal_bank.png"
+          alt=""
+        />
+        <figcaption class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex">
+          bank portal
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute right-0 top-[2100px] 2xl:top-[2700px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/netflix.png"
+          alt=""
+        />
+        <figcaption
+          class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex justify-end"
+        >
+          SignUP Form
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute left-0 top-[2500px] 2xl:top-[3100px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/darx_x.png"
+          alt=""
+        />
+        <figcaption class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex">
+          fantastic layout
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute right-0 top-[3000px] 2xl:top-[3800px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/beer.png"
+          alt=""
+        />
+        <figcaption
+          class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex justify-end"
+        >
+          responsive Bootstrap
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute left-0 top-[3400px] 2xl:top-[4200px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/3d_room.png"
+          alt=""
+        />
+        <figcaption class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex">
+          3D stuff
+        </figcaption>
+      </figure>
+      <figure
+        data-ari="op"
+        class="transition duration-300 h-[400px] md:h-[800px] xl:h-[600px] 2xl:h-[800px] xl:absolute right-0 top-[3900px] 2xl:top-[4900px] mt-6"
+      >
+        <img
+          class="w-full px-4 md:px-8 h-[350px] md:h-[750px] xl:h-[550px] 2xl:h-[750px]"
+          src="src/img/galaxy.png"
+          alt=""
+        />
+        <figcaption
+          class="w-full px-4 md:px-8 my-2 text-xl md:text-4xl flex justify-end"
+        >
+          animated objects
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ////////////////////////////////////section3 done ////////////////////////////////////// -->
+
+    <section
+      class="sec4 mt-[200px] md:mt-[300px] xl:mt-0 xl:absolute top-[9000px] 2xl:top-[11000px] w-full"
+    >
+      <figure class="w-full relative *:absolute">
+        <img
+          data-ari="op"
+          class="transition duration-300 w-full h-[100vh] xl:h-[120vh] z-10 object-cover"
+          src="src/img/map.jpg"
+          alt=""
+        />
+        <h1
+          class="z-20 left-[50%] translate-x-[-50%] top-[20px] text-[80px] md:text-[120px] xl:text-[200px] 2xl:text-[280px] opacity-50 font-serif"
+        >
+          Cantact
+        </h1>
+        <span
+          class="z-20 left-[50%] translate-x-[-50%] top-[130px] md:top-[180px] xl:top-[260px] 2xl:top-[360px] text-[14px] md:text-[25px] xl:text-[25px] 2xl:text-[30px] opacity-50 font-serif"
+          >We'd love to hear from you!</span
+        >
+        <h2
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[170px] md:top-[260px] xl:top-[360px] 2xl:top-[480px] text-[20px] md:text-[30px] xl:text-[35px] 2xl:text-[55px] font-serif"
+        >
+          Get in touch
+        </h2>
+        <a
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[200px] md:top-[310px] xl:top-[410px] 2xl:top-[550px] text-[16px] md:text-[25px] xl:text-[25px] 2xl:text-[35px] opacity-90 underline font-thin duration-200 hover:font-bold"
+          href=""
+          >Ari.afsharian1@gmail.com</a
+        >
+        <h2
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[230px] md:top-[360px] xl:top-[450px] 2xl:top-[600px] text-[20px] md:text-[30px] xl:text-[35px] 2xl:text-[55px] font-serif"
+        >
+          Follow
+        </h2>
+        <a
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[260px] md:top-[400px] xl:top-[500px] 2xl:top-[680px] text-[16px] md:text-[25px] xl:text-[25px] 2xl:text-[35px] opacity-90 font-thin duration-200 hover:font-bold"
+          href=""
+          >instagram</a
+        >
+        <a
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[290px] md:top-[440px] xl:top-[540px] 2xl:top-[730px] text-[16px] md:text-[25px] xl:text-[25px] 2xl:text-[35px] opacity-90 font-thin duration-200 hover:font-bold"
+          href=""
+          >Facebook</a
+        >
+        <h2
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[320px] md:top-[480px] xl:top-[580px] 2xl:top-[790px] text-[20px] md:text-[30px] xl:text-[35px] 2xl:text-[55px] font-serif"
+        >
+          Studio
+        </h2>
+        <a
+          class="z-20 left-[20px] md:left-[60px] xl:left-[100px] 2xl:left-[150px] top-[350px] md:top-[530px] xl:top-[630px] 2xl:top-[880px] text-[16px] md:text-[25px] xl:text-[25px] 2xl:text-[35px] opacity-90 font-thin duration-200 hover:font-bold"
+          href=""
+        >
+          iran parand, (+98)-938-9149-539
+        </a>
+      </figure>
+    </section>
+  
+    <!-- ////////////////////////////////////////////////////section4 done////////////////////////////////////////////////////-->
+
+    <section
+      class="sec5 w-full h-[100vh] md:h-[110vh] xl:h-[140vh] absolute top-[6400px] md:top-[11300px] xl:top-[10000px] 2xl:top-[12500px] bg-primary-p overflow-hidden"
+    >
+      <figure class="relative *:absolute">
+        <div
+          class="left-[50%] translate-x-[-50%] top-[100px] xl:top-[250px] 2xl:top-[300px] *:text-[10px] *:md:text-[30px] z-40"
+        >
+          <h1
+            data-ari="scale"
+            class="font-bold transition duration-500 ease-out"
+          >
+            Work
+          </h1>
+          <h1
+            data-ari="scale"
+            class="font-bold transition duration-500 ease-out"
+          >
+            With
+          </h1>
+          <h1
+            data-ari="scale"
+            class="font-bold transition duration-500 ease-out"
+          >
+            Us
+          </h1>
+        </div>
+        <img
+          class="z-30 left-[10px] md:left-[0px] w-[120px] md:w-[150px] top-[400px] md:top-[600px] 2xl:top-[800px]"
+          src="src/img/big_ball.png"
+          alt=""
+        />
+        <img
+          class="z-10 left-[-200px] md:left-[-300px] 2xl:left-[-400px] w-[350px] md:w-[500px] 2xl:w-[700px] top-[250px] md:top-[300px] blur-sm"
+          src="src/img/big_ball.png"
+          alt=""
+        />
+        <img
+          class="z-30 left-[250px] md:left-[500px] xl:left-[500px] 2xl:left-[1100px] w-[80px] md:w-[150px] top-[600px] md:top-[800px] xl:top-[650px] 2xl:top-[850px]"
+          src="src/img/big_ball.png"
+          alt=""
+        />
+        <img
+          class="z-30 left-[200px] md:left-[400px] xl:left-[600px] 2xl:left-[900px] w-[170px] md:w-[300px] top-[250px] md:top-[300px] 2xl:top-[450px]"
+          src="src/img/snake.png"
+          alt=""
+        />
+        <img
+          class="hidden md:flex z-10 md:right-[-400px] w-[350px] md:w-[800px] md:top-[800px] xl:top-[500px] 2xl:top-[650px] blur-sm"
+          src="src/img/big_ball.png"
+          alt=""
+        />
+        <img
+          class="hidden md:flex z-20 md:right-[100px] 2xl:right-[200px] w-[350px] md:w-[400px] 2xl:w-[600px] md:top-[700px] xl:top-[450px] 2xl:top-[450px] blur-sm"
+          src="src/img/big_ball.png"
+          alt=""
+        />
+      </figure>
+    </section>
+
+    <!-- ////////////////////////////////////////////////section5 done//////////////////////////////////////////////// -->
+
+    <section
+      class="footer w-full h-[150vh] md:h-[80vh] xl:h-[120vh] 2xl:md:h-[80vh] bg-black absolute top-[7250px] md:top-[12700px] xl:top-[11200px] 2xl:top-[14100px] overflow-hidden"
+    >
+      <div class="main w-full h-full relative *:absolute">
+        <div
+          class="top-[250px] md:top-[100px] xl:top-[100px] 2xl:top-[30px] left-[20px] md:left-[60px] xl:left-[150px] 2xl:left-[250px] *:text-[50px] *:xl:text-[80px] *:2xl:text-[90px]"
+        >
+          <h1 class="text-white">Ready to</h1>
+          <h1 class="text-white">Starst your</h1>
+          <h1 class="text-white">naxt sprint?</h1>
+        </div>
+        <div
+          class="top-[550px] md:top-[400px] xl:top-[550px] 2xl:top-[500px] left-[20px] md:left-[60px] xl:left-[150px] 2xl:left-[250px] *:font-mono *:text-[18px]"
+        >
+          <p class="text-white">Ari.afsharian1@gmail.com</p>
+          <p class="text-white">(+98)-938-9149-539</p>
+          <p class="text-white">Tehran-Parand</p>
+        </div>
+        <div
+          class="top-[680px] md:top-[500px] xl:top-[550px] 2xl:top-[500px] left-[20px] md:left-[60px] xl:left-[600px] 2xl:left-[800px]"
+        >
+          <h2 class="text-white text-[20px] font-bold">Follow</h2>
+          <a href="https://github.com/ari420" target="_blank" class="block text-white hover:text-orange-700 duration-300"
+            >Github</a
+          >
+          <a href="https://www.linkedin.com/in/arian-afsharian-7a3903156" target="_blank" class="block text-white hover:text-orange-700 duration-300"
+            >linkedin</a
+          >
+        </div>
+        <figure
+          class="border-4 border-white top-[830px] md:top-[430px] xl:top-[500px] 2xl:top-[450px] left-[20px] md:left-[400px] xl:left-[800px] 2xl:left-[1100px] w-[150px] h-[150px] animate-fancy overflow-hidden"
+        >
+          <img
+            class="w-full h-full object-cover"
+            src="src/img/myPhoto.jpg"
+            alt="photo..."
+          />
+        </figure>
+        <p
+          class="bottom-[30px] flex justify-center text-white text-[20px] md:text-[20px] xl:text-[15px] 2xl:text-[20px] w-full font-thin"
+        >
+          ARIAN STUDIO ©2024
+        </p>
+      </div>
+    </section>
+    <!-- ////////////////////////////////////////footer done////////////////////////////////////////////// -->
+
+
+    <!-- //////////////////js cconection///////////////////// -->
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
