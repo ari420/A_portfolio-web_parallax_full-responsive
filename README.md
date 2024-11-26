@@ -9,7 +9,7 @@
 
 ## ^Demo^ 
 
-https://ari420.github.io/A_portfolio-web_parallax_full-
+https://ari420.github.io/A_portfolio-web_parallax_full-responsive/
 # ^description^
 here is a parallax web and portfolio that you can see my products. hope you will enjoy and if there is any question about my job you can easily contact me.
 ## 🔗 Links
